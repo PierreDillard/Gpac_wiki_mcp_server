@@ -1,0 +1,12 @@
+langchain
+langchain-community      # loaders, text splitters...
+langchain-qdrant        # intégration Qdrant avec Langchain
+qdrant-client
+sentence-transformers    # pour HuggingFaceEmbeddings
+fastapi                 # si tu exposes une API REST en plus
+uvicorn                 # pour lancer FastAPI
+mcp                     # SDK serveur MCP
+mcp-cli                 # Outil CLI pour MCP
+pyyaml                # parsing mkdocs.yml, etc.
+python-dotenv           # gestion .env si besoin 
+

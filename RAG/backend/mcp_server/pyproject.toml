@@ -1,0 +1,17 @@
+[project]
+name = "gpac-doc-mcp"
+version = "0.1.0"
+
+dependencies = [
+  "langchain",
+  "langchain-community",
+  "langchain-qdrant",
+  "qdrant-client",
+  "sentence-transformers",
+  "fastapi",
+  "uvicorn",
+  "mcp",
+  "mcp-cli",
+  "pyyaml",
+  "python-dotenv"
+]

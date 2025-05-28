@@ -1,0 +1,63 @@
+.env
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# --- Env / Dependencies ---
+.venv/
+env/
+venv/
+ENV/
+.uv/
+uv.lock
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+*.egg
+
+# --- IDE/Editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Logs & Data ---
+*.log
+*.sqlite3
+*.db
+*.tmp
+*.bak
+
+# --- Notebooks ---
+*.ipynb_checkpoints
+
+# --- Local config/secrets ---
+.env
+.env.*
+
+# --- Misc ---
+# Ignore Docker artifacts except Dockerfile
+docker-compose*.yml
+Dockerfile.*
+
+# --- Project-specific ---
+# Markdown-generated split files (if you generate processed docs or chunks)
+docs/__pycache__/
+docs/*.tmp
+docs/*.log
+docs/.DS_Store
+
+# --- Node/npm (au cas où tu utilises une interface web) ---
+node_modules/
+npm-debug.log*
+
+# --- MkDocs build output (si build docs) ---
+site/

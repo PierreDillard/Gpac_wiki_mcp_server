@@ -1,6 +1,18 @@
 FROM python:3.10-slim
+
+# Utilise un dossier de travail classique
 WORKDIR /app
-COPY requirements.txt ./
+
+# Installation des dépendances du serveur MCP
+COPY mcp_server/requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
-COPY . ./
-CMD ["uvicorn", "api.app:app", "--host", "0.0.0.0", "--port", "8000"]
+
+# Copie du code source
+COPY . .
+
+# Le serveur MCP écoute par défaut sur 127.0.0.1:8000.
+# On force l'écoute sur toutes les interfaces pour l'accès extérieur.
+ENV FASTMCP_HOST=0.0.0.0
+
+# Lance le serveur MCP
+CMD ["python", "mcp_server/main.py"]
